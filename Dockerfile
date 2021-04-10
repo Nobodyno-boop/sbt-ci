@@ -13,6 +13,8 @@ ARG SBT_VERSION=1.4.9
 # Environment variables
 ENV SBT_HOME=/usr/share/sbt
 
+ENV JAVA_OPTS="-Dsbt.rootdir=true"
+
 # Install and keep a copy of bash.  Some scala/scalac scripts depend on bash(!),
 # and work unreliably with ash, et al.
 RUN apk add --no-cache bash
